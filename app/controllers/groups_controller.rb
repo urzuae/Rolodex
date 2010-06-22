@@ -9,9 +9,11 @@ class GroupsController < ApplicationController
     @group = Group.new(params[:group])
     respond_to do |format|
       format.js do |page|
-        if @group.save
-          render :update do |page|
+        render :update do |page|
+          if @group.save
             page.insert_html(:bottom, 'groups_list', :partial => @group)
+          else
+            page.alert("Group can be created")
           end
         end
       end
@@ -36,4 +38,24 @@ class GroupsController < ApplicationController
     end
   end
   
+  def display_new
+    @group = Group.new
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          page.replace_html 'edit_container', :partial => '/groups/form', :object => @group
+        end
+      end
+    end
+  end
+  
+  def clear_form
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          page.replace_html 'edit_container', '<div id="edit_container"></div>'
+        end
+      end
+    end
+  end
 end

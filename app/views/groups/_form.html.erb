@@ -1,5 +1,11 @@
-<% form.error_messages%>
-<div>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
+<% remote_form_for @group do |f| %>
+<% f.error_messages%>
+<div class="group_submit">
+  <%= f.submit 'Save' %>
+  <%= button_to_remote 'Cancel', :url => {:controller => "groups", :action => "clear_form" } %>
 </div>
+<div>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+<% end %>
