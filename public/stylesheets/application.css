@@ -1,0 +1,47 @@
+body {
+  background-color: #1155DD;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+#contact_form {
+  display: block;
+  background-color: green;
+  border: solid 2px black;
+  float: left;
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#contacts_list {
+  display: block;
+  background-color: green;
+  border: solid 1px black;
+  float: left;
+  padding: 5px 8px;
+  margin: 10px 0;
+  min-width: 200px;
+  min-height: 400px;
+}
+
+#groups_title {
+  background-color: red;
+}
+
+.length {
+  float: right;
+}
+
+#groups_list {
+  display: block;
+  background-color: green;
+  border: solid 1px black;
+  float: left;
+  padding: 5px 8px;
+  margin: 10px 0;
+  min-width: 200px;
+  min-height: 400px;
+}
+
+#contacts_title {
+  background-color: red;
+}

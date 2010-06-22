@@ -1,0 +1,18 @@
+login: &login
+  adapter: mysql
+  encoding: utf8
+  pool: 5
+  username: root
+  password: password
+
+development:
+  <<: *login
+  database: rolodex_development
+
+test:
+  <<: *login
+  database: rolodex_test
+
+production:
+  <<: *login
+  database: rolodex
