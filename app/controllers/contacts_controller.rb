@@ -38,6 +38,13 @@ class ContactsController < ApplicationController
   
   def destroy
     @contact.destroy
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          page.alert("deleted")
+        end
+      end
+    end
   end
   
   def show_all_contacts
@@ -59,7 +66,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.replace_html 'edit_container', :partial => '/contacts/form_edit', :object => @contact
+          page.replace_html 'edit_container', :partial => '/contacts/form', :object => @contact
         end
       end
     end

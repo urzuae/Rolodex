@@ -1,4 +1,6 @@
 <% remote_form_for @contact do |f| %>
+  <%= f.submit 'Save' %>
+  <%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>
 <div>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -9,8 +11,8 @@
 </div>
 <div>
   <%= f.label :group_id %>
-  <%= f.collection_select(:group_id, @groups, :id, :title,{:prompt => true}) %>
+  <%= f.collection_select(:group_id, @groups, :id, :title, {:prompt => true}) %>
 </div>
-  <%= f.submit 'Save' %>
+
 <% end %>
-<%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>    
+

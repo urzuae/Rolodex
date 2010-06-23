@@ -29,6 +29,7 @@ class GroupsController < ApplicationController
         format.js do
           render :update do |page|
             page.replace_html 'contacts_container', :partial => @contacts
+            page.replace_html 'edit_group_container', :partial => "/groups/simple_group", :object => @group
           end
         end
       end
@@ -44,19 +45,48 @@ class GroupsController < ApplicationController
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.replace_html('edit_container', :partial => '/groups/form', :object => @group)
+          page.replace_html 'edit_container', :partial => '/groups/form', :object => @group
+        end
+      end
+    end
+  end
+  
+  def display_edit
+    @group = Group.find(params[:id])
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          page.replace_html 'edit_container', :partial => '/groups/form', :object => @group
+          page.replace 'edit_group_container', '<div id="edit_group_container"></div>'
         end
       end
     end
   end
   
   def clear_form
+    @group = Group.find(params[:id])
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.replace_html 'edit_container', '<div id="edit_container"></div>'
+          page.replace 'edit_container', '<div id="edit_container"></div>'
+          page.replace_html 'edit_group_container', :partial => "/groups/simple_group", :object => @group
         end
       end
     end
   end
+  def destroy_group
+    @groups = Group.all
+    @group = Group.find(params[:id])
+    @group.delete_contacts
+    @group.destroy
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          page.replace 'edit_container', '<div id="edit_container"></div>'
+          page.replace_html 'edit_group_container', :partial => "/groups/group", :collection => @groups
+        end
+      end
+    end
+  end
+  
 end
