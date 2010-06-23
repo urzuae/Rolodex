@@ -1,24 +1,16 @@
 <% remote_form_for @contact do |f| %>
-<% f.error_messages%>
-<div class="contact_submit">
-  <% if @contact.name == nil %>
-    <%= f.submit 'Save' %>
-    <%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>    
-  <% else %>
-    <%= f.submit 'Save' %>
-    <%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "display_contact", :id => @contact.id } %>
-  <% end %>
-</div>
 <div>
   <%= f.label :name %>
   <%= f.text_field :name %>
 </div>
 <div>
   <%= f.label :company %>
-  <%= f.text_field :company%>
+  <%= f.text_field :company %>
 </div>
 <div>
   <%= f.label :group_id %>
-  <%= f.collection_select(:group_id, @groups, :id, :title)%>
+  <%= f.collection_select(:group_id, @groups, :id, :title,{:prompt => true}) %>
 </div>
+  <%= f.submit 'Save' %>
 <% end %>
+<%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>    

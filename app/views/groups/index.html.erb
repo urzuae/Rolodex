@@ -2,21 +2,23 @@
 <div>
   <div id="groups_list">
     <div id="groups_title">My Lists
-      <%= button_to_remote '+', :url => {:controller => "groups", :action => :display_new } %>
-    </div> 
+      <div class="plus_button"><%= button_to_remote '+', :url => {:controller => "groups", :action => "display_new" } %>
+      </div>
+    </div>
+    <div id="groups_container">
       <%= render @groups %>
+    </div>
     </div>
   </div>
 </div>
 <div>
   <div id="contacts_list">
     <div id="contacts_title">
-      <% unless @contacts.empty? %>
         <%= link_to_remote 'My Contacts', :url => {:controller => 'contacts', :action => :show_all_contacts} %>
-      <% else %>
-        My Contacts
-      <% end %>
-      <%= button_to_remote '+', :url => {:controller => "contacts", :action => :display_new } %></div>
+        <%= @contacts.length %>
+      <div class="plus_button"><%= button_to_remote '+', :url => {:controller => "contacts", :action => :display_new } %>
+      </div>
+    </div>
     <div id="contacts_container">
     </div>
     </div>

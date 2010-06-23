@@ -1,24 +1,25 @@
 class GroupsController < ApplicationController
   def index
-    @contacts = Contact.all()
-    @contact = Contact.new
+    @contacts = Contact.all
     @groups = Group.all
-    @group = Group.new
   end
+  
   def create
     @group = Group.new(params[:group])
     respond_to do |format|
-      format.js do |page|
+      format.js do
         render :update do |page|
           if @group.save
-            page.insert_html(:bottom, 'groups_list', :partial => @group)
+            page.insert_html(:bottom, 'groups_list', :partial => 'groups/group', :object => @group)
+            page.alert("Group created")
           else
-            page.alert("Group can be created")
+            page.alert("Group can not be created")
           end
         end
       end
     end
   end
+  
   def show_contacts
     @group = Group.find(params[:id])
     @contacts = @group.contacts
@@ -27,13 +28,13 @@ class GroupsController < ApplicationController
       respond_to do |format|
         format.js do
           render :update do |page|
-            page.replace 'contacts_container', :partial => @contacts
+            page.replace_html 'contacts_container', :partial => @contacts
           end
         end
       end
     else
       render :update do |page|
-        page.alert("No contacts")
+        page.replace 'contacts_container', '<div id="contacts_container"></div>'
       end
     end
   end
@@ -43,7 +44,7 @@ class GroupsController < ApplicationController
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.replace_html 'edit_container', :partial => '/groups/form', :object => @group
+          page.replace_html('edit_container', :partial => '/groups/form', :object => @group)
         end
       end
     end

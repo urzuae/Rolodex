@@ -3,12 +3,19 @@ class ContactsController < ApplicationController
   before_filter :find_groups, :only => [:display_edit, :display_new]
   
   def create
+    @contacts = Contact.all
     @contact = Contact.new(params[:contact])
     respond_to do |format|
       format.js do
         render :update do |page|
           if @contact.save
-            page.insert_html :bottom, 'contacts_list', :partial => @contact
+            unless @contact.group_id == nil
+              page.replace_html 'groups_container', :partial => 'groups/group', :collection => Group.all
+              page.replace_html 'contacts_container', :partial => @contact.group.contacts.sort!{|f,g| f.name <=> g.name}
+            else
+              page.replace_html 'contacts_list', :partial => 'contacts/contact', :object => @contacts
+            end
+            page.replace 'edit_container', '<div id="edit_container"></div>'
           else
             page.alert("Contact can not be saved")
           end
@@ -18,6 +25,15 @@ class ContactsController < ApplicationController
   end
   
   def update
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          if @contact.update_attributes(params[:contact])
+            page.alert("Contact can not be saved")
+          end
+        end
+      end
+    end
   end
   
   def destroy
@@ -31,7 +47,7 @@ class ContactsController < ApplicationController
       respond_to do |format|
         format.js do
           render :update do |page|
-            page.replace 'contacts_container', :partial => @contacts
+            page.replace_html 'contacts_container', :partial => @contacts
             page.replace 'edit_container', '<div id="edit_container"></div>'
           end
         end
@@ -43,7 +59,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.replace_html 'edit_container', :partial => '/contacts/form', :object => @contact
+          page.replace_html 'edit_container', :partial => '/contacts/form_edit', :object => @contact
         end
       end
     end

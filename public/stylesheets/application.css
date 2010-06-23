@@ -68,3 +68,7 @@ body {
   width: 500px;
   min-height: 400px;
 }
+
+.plus_button{
+  float: right;
+}
