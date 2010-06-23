@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   def index
     @contacts = Contact.all
     @groups = Group.all
+    @contacts_list = Contact.listing
   end
   
   def create

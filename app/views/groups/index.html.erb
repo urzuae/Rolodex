@@ -30,7 +30,19 @@
   <div id="edit_container">
   </div>
 </div>
+<div id="searcher">
+  <div id="searcher_title">
+    <input id="search_field" type="hidden" value='<% @contacts_list %>'/>
+    <input id="searching" type="text"/>
+    <div id="search_results">
+    </div>
+  </div>
+</div>
 
 <script>
-  $('#edit_button').attr("disabled", "disabled")
+  $(function() {
+    $('#searching').autocomplete({
+      source: $('search_field').val();
+    });
+  });
 </script>

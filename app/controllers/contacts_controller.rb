@@ -93,7 +93,23 @@ class ContactsController < ApplicationController
       end
     end
   end
-  
+  def show_filter
+    r = Regexp.new(/str/i)
+    results = ""
+    @contacts = Contact.all
+    respond_to do |format|
+      format.js do
+        @contacts.each do |f|
+          render :update do |page|
+            if f.name =~ r
+              results += f.name + "\n"
+              page.replace_html "search_results", "#{results}"
+            end
+          end
+        end
+      end
+    end
+  end
   def find_contact
     @contact = Contact.find(params[:id])
   end

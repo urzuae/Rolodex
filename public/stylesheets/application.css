@@ -72,3 +72,14 @@ body {
 .plus_button{
   float: right;
 }
+
+#searcher {
+  display: block;
+  background-color: green;
+  border: solid 1px black;
+  float: left;
+  padding: 5px 8px;
+  margin: 10px 0;
+  min-width: 200px;
+  min-height: 400px;
+}
