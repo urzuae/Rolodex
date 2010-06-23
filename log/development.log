@@ -50397,3 +50397,2781 @@ Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:30:50
   [4;35;1mGroup Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
 Rendered contacts/_form (9.8ms)
 Completed in 66ms (View: 12, DB: 47) | 200 OK [http://localhost/contacts/display_edit/13]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:31:46) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (44.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+Rendered groups/_group (49.2ms)
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 4) [0m
+Rendered groups/_group (2.2ms)
+Completed in 64ms (View: 11, DB: 47) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:32:00) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mGroup Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (52.7ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 3) [0m
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+Completed in 69ms (View: 1, DB: 58) | 200 OK [http://localhost/groups/show_contacts/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:32:01) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mGroup Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (121.4ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 3) [0m
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+Completed in 134ms (View: 1, DB: 126) | 200 OK [http://localhost/groups/show_contacts/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:32:10) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mGroup Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (50.7ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 3) [0m
+  [4;35;1mContact Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+Completed in 64ms (View: 1, DB: 55) | 200 OK [http://localhost/groups/show_contacts/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:32:56) [GET]
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;35;1mGroup Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mContact Load (138.5ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+Rendered groups/_group (143.3ms)
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 4) [0m
+Rendered groups/_group (2.2ms)
+Completed in 159ms (View: 12, DB: 142) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:33:03) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;36;1mGroup Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (47.5ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 3) [0m
+  [4;36;1mContact Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+Completed in 65ms (View: 1, DB: 54) | 200 OK [http://localhost/groups/show_contacts/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:37:32) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (3.9ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (45.1ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+Rendered groups/_group (52.9ms)
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 4) [0m
+Rendered groups/_group (1.8ms)
+Completed in 74ms (View: 15, DB: 50) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:37:34) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mGroup Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (51.1ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 3) [0m
+  [4;35;1mContact Columns (3.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+Rendered groups/_simple_group (3.5ms)
+Completed in 76ms (View: 6, DB: 59) | 200 OK [http://localhost/groups/show_contacts/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#destroy_group (for 127.0.0.1 at 2010-06-22 21:37:35) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mGroup Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (122.0ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 3) [0m
+  [4;36;1mContact Load (1.9ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Destroy (1.2ms)[0m   [0;1mDELETE FROM `groups` WHERE `id` = 3[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContact Load (0.8ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 3) [0m
+Rendered groups/_group (3.5ms)
+  [4;35;1mContact Load (4.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 4) [0m
+Rendered groups/_group (5.9ms)
+Completed in 190ms (View: 7, DB: 172) | 200 OK [http://localhost/groups/destroy_group/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:37:38) [GET]
+  [4;36;1mContact Load (1.2ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (1.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (0.7ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 4) [0m
+Rendered groups/_group (6.4ms)
+Completed in 24ms (View: 10, DB: 5) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:38:02) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"4"}
+  [4;36;1mGroup Columns (9.8ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (45.2ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 4) [0m
+  [4;36;1mContact Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 4) [0m
+Rendered groups/_simple_group (3.8ms)
+Completed in 74ms (View: 8, DB: 57) | 200 OK [http://localhost/groups/show_contacts/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:38:37) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (1.4ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (12.0ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (50.8ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 4) [0m
+Rendered groups/_group (65.7ms)
+Completed in 88ms (View: 14, DB: 65) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:38:39) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"4"}
+  [4;36;1mGroup Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (54.5ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 4) [0m
+  [4;36;1mContact Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 4) [0m
+Rendered groups/_simple_group (3.2ms)
+Completed in 77ms (View: 6, DB: 62) | 200 OK [http://localhost/groups/show_contacts/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#destroy_group (for 127.0.0.1 at 2010-06-22 21:38:40) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"4"}
+  [4;36;1mGroup Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (1.5ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 4) [0m
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 4) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Destroy (0.2ms)[0m   [0;1mDELETE FROM `groups` WHERE `id` = 4[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mGroup Load (0.1ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Completed in 16ms (View: 1, DB: 5) | 200 OK [http://localhost/groups/destroy_group/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:38:42) [GET]
+  [4;35;1mContact Load (0.4ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 69ms (View: 6, DB: 1) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#display_new (for 127.0.0.1 at 2010-06-22 21:38:54) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Columns (199.7ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered groups/_form (4.6ms)
+Completed in 210ms (View: 6, DB: 200) | 200 OK [http://localhost/groups/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2010-06-22 21:38:59) [POST]
+  Parameters: {"group"=>{"title"=>"hhashjhjk"}, "authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (44.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Create (0.2ms)[0m   [0;1mINSERT INTO `groups` (`created_at`, `title`, `updated_at`) VALUES('2010-06-23 02:38:59', 'hhashjhjk', '2010-06-23 02:38:59')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 5) [0m
+Rendered groups/_group (4.7ms)
+Completed in 65ms (View: 8, DB: 48) | 200 OK [http://localhost/groups]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2010-06-22 21:39:03) [POST]
+  Parameters: {"group"=>{"title"=>"asdfa"}, "authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGroup Create (0.2ms)[0m   [0mINSERT INTO `groups` (`created_at`, `title`, `updated_at`) VALUES('2010-06-23 02:39:03', 'asdfa', '2010-06-23 02:39:03')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 6) [0m
+Rendered groups/_group (5.2ms)
+Completed in 17ms (View: 8, DB: 3) | 200 OK [http://localhost/groups]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:39:06) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"5"}
+  [4;36;1mGroup Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (51.3ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 5) [0m
+  [4;36;1mContact Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 5) [0m
+Rendered groups/_simple_group (2.2ms)
+Completed in 73ms (View: 8, DB: 55) | 200 OK [http://localhost/groups/show_contacts/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#destroy_group (for 127.0.0.1 at 2010-06-22 21:39:10) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"5"}
+  [4;36;1mGroup Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (1.6ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 5) [0m
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 5) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Destroy (0.2ms)[0m   [0;1mDELETE FROM `groups` WHERE `id` = 5[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mGroup Load (2.5ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 6) [0m
+Rendered groups/_group (2.6ms)
+Completed in 22ms (View: 4, DB: 8) | 200 OK [http://localhost/groups/destroy_group/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:40:04) [GET]
+  [4;36;1mContact Load (0.4ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (1.8ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (46.2ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 6) [0m
+Rendered groups/_group (50.3ms)
+Completed in 67ms (View: 9, DB: 50) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:40:06) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"6"}
+  [4;36;1mGroup Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (48.9ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 6) [0m
+  [4;36;1mContact Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 6) [0m
+Rendered groups/_simple_group (2.2ms)
+Completed in 79ms (View: 7, DB: 61) | 200 OK [http://localhost/groups/show_contacts/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#destroy_group (for 127.0.0.1 at 2010-06-22 21:40:07) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"6"}
+  [4;36;1mGroup Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 6) [0m
+  [4;36;1mContact Load (0.6ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 6) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Destroy (0.2ms)[0m   [0;1mDELETE FROM `groups` WHERE `id` = 6[0m
+  [4;35;1mSQL (5.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Completed in 20ms (View: 1, DB: 9) | 200 OK [http://localhost/groups/destroy_group/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:40:08) [GET]
+  [4;35;1mContact Load (1.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 15ms (View: 5, DB: 2) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:40:23) [GET]
+  [4;35;1mContact Load (1.8ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (2.1ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 20ms (View: 6, DB: 4) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#display_new (for 127.0.0.1 at 2010-06-22 21:40:24) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Columns (13.9ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered groups/_form (8.1ms)
+Completed in 29ms (View: 10, DB: 14) | 200 OK [http://localhost/groups/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2010-06-22 21:40:28) [POST]
+  Parameters: {"group"=>{"title"=>"asdfasdf"}, "authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Columns (13.8ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Create (0.5ms)[0m   [0;1mINSERT INTO `groups` (`created_at`, `title`, `updated_at`) VALUES('2010-06-23 02:40:28', 'asdfasdf', '2010-06-23 02:40:28')[0m
+  [4;35;1mSQL (9.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContact Load (0.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 7) [0m
+Rendered groups/_group (5.2ms)
+Completed in 40ms (View: 10, DB: 25) | 200 OK [http://localhost/groups]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2010-06-22 21:40:34) [POST]
+  Parameters: {"group"=>{"title"=>"asdfasdfrqggae"}, "authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mSQL (45.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGroup Create (0.2ms)[0m   [0mINSERT INTO `groups` (`created_at`, `title`, `updated_at`) VALUES('2010-06-23 02:40:34', 'asdfasdfrqggae', '2010-06-23 02:40:34')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContact Load (0.4ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 8) [0m
+Rendered groups/_group (63.7ms)
+Completed in 131ms (View: 67, DB: 50) | 200 OK [http://localhost/groups]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:40:37) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"7"}
+  [4;36;1mGroup Columns (17.2ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (1.3ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 7) [0m
+  [4;36;1mContact Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 7) [0m
+Rendered groups/_simple_group (5.3ms)
+Completed in 40ms (View: 8, DB: 21) | 200 OK [http://localhost/groups/show_contacts/7]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#destroy_group (for 127.0.0.1 at 2010-06-22 21:40:41) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"7"}
+  [4;36;1mGroup Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (50.7ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 7) [0m
+  [4;36;1mContact Load (1.2ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 7) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Destroy (0.2ms)[0m   [0;1mDELETE FROM `groups` WHERE `id` = 7[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 8) [0m
+Rendered groups/_group (3.2ms)
+Completed in 72ms (View: 5, DB: 56) | 200 OK [http://localhost/groups/destroy_group/7]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:40:43) [GET]
+  [4;36;1mContact Load (0.7ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (90.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 8) [0m
+Rendered groups/_group (95.7ms)
+Completed in 109ms (View: 10, DB: 93) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:41:48) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (45.4ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 8) [0m
+Rendered groups/_group (49.8ms)
+Completed in 63ms (View: 8, DB: 48) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:41:49) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"8"}
+  [4;36;1mGroup Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (51.9ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 8) [0m
+  [4;36;1mContact Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 8) [0m
+Rendered groups/_simple_group (3.0ms)
+Completed in 70ms (View: 6, DB: 56) | 200 OK [http://localhost/groups/show_contacts/8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#destroy_group (for 127.0.0.1 at 2010-06-22 21:41:50) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"8"}
+  [4;36;1mGroup Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 8) [0m
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 8) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Destroy (0.2ms)[0m   [0;1mDELETE FROM `groups` WHERE `id` = 8[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Completed in 13ms (View: 1, DB: 4) | 200 OK [http://localhost/groups/destroy_group/8]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#display_new (for 127.0.0.1 at 2010-06-22 21:41:52) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered groups/_form (3.8ms)
+Completed in 12ms (View: 5, DB: 2) | 200 OK [http://localhost/groups/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2010-06-22 21:41:54) [POST]
+  Parameters: {"group"=>{"title"=>"asdfasdf"}, "authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (45.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Create (0.2ms)[0m   [0;1mINSERT INTO `groups` (`created_at`, `title`, `updated_at`) VALUES('2010-06-23 02:41:54', 'asdfasdf', '2010-06-23 02:41:54')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContact Load (0.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 9) [0m
+Rendered groups/_group (4.4ms)
+Completed in 63ms (View: 8, DB: 49) | 200 OK [http://localhost/groups]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:42:21) [GET]
+  [4;35;1mContact Load (0.6ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;35;1mGroup Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mContact Load (49.7ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 9) [0m
+Rendered groups/_group (54.6ms)
+Completed in 73ms (View: 10, DB: 54) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#display_new (for 127.0.0.1 at 2010-06-22 21:42:24) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Columns (20.2ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered groups/_form (4.0ms)
+Completed in 30ms (View: 5, DB: 20) | 200 OK [http://localhost/groups/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2010-06-22 21:42:26) [POST]
+  Parameters: {"group"=>{"title"=>"sregaerger"}, "authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (49.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Create (0.3ms)[0m   [0;1mINSERT INTO `groups` (`created_at`, `title`, `updated_at`) VALUES('2010-06-23 02:42:27', 'sregaerger', '2010-06-23 02:42:27')[0m
+  [4;35;1mSQL (39.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 10) [0m
+Rendered groups/_group (6.1ms)
+Rendered groups/_form (4.1ms)
+Completed in 112ms (View: 14, DB: 92) | 200 OK [http://localhost/groups]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:43:03) [GET]
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;35;1mGroup Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 9) [0m
+Rendered groups/_group (5.1ms)
+  [4;35;1mContact Load (0.2ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 10) [0m
+Rendered groups/_group (1.5ms)
+Completed in 17ms (View: 9, DB: 3) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#display_new (for 127.0.0.1 at 2010-06-22 21:43:05) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+Rendered groups/_form (54.2ms)
+Completed in 62ms (View: 56, DB: 2) | 200 OK [http://localhost/groups/display_new]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2010-06-22 21:43:08) [POST]
+  Parameters: {"group"=>{"title"=>"asdfasf"}, "authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mSQL (45.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGroup Create (0.2ms)[0m   [0mINSERT INTO `groups` (`created_at`, `title`, `updated_at`) VALUES('2010-06-23 02:43:08', 'asdfasf', '2010-06-23 02:43:08')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 11) [0m
+Rendered groups/_group (4.1ms)
+Completed in 61ms (View: 7, DB: 49) | 200 OK [http://localhost/groups]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:43:09) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (43.9ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 9) [0m
+Rendered groups/_group (47.9ms)
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 10) [0m
+Rendered groups/_group (1.5ms)
+  [4;35;1mContact Load (0.2ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 11) [0m
+Rendered groups/_group (1.3ms)
+Completed in 62ms (View: 10, DB: 46) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (103.4ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (156.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateContacts (20100622151143)
+  [4;35;1mSQL (105.1ms)[0m   [0mCREATE TABLE `contacts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `company` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100622151143')[0m
+Migrating to AddGroupIdToContacts (20100622155509)
+  [4;35;1mSQL (234.9ms)[0m   [0mALTER TABLE `contacts` ADD `group_id` int(11)[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100622155509')[0m
+Migrating to CreateGroups (20100622165055)
+  [4;35;1mSQL (86.4ms)[0m   [0mCREATE TABLE `groups` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100622165055')[0m
+Migrating to AddAddressAndPhoneToContacts (20100623024422)
+  [4;35;1mSQL (135.5ms)[0m   [0mALTER TABLE `contacts` ADD `address` varchar(255)[0m
+  [4;36;1mSQL (133.4ms)[0m   [0;1mALTER TABLE `contacts` ADD `phone` varchar(255)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100623024422')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `contacts`[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW KEYS FROM `contacts`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `groups`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `groups`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:45:21) [GET]
+  [4;36;1mContact Load (0.6ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 14ms (View: 5, DB: 2) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 21:45:23) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+
+ActionView::MissingTemplate (Missing template contacts/show_all_contacts.erb in view path app/views):
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:45:24) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mContact Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_form (12.8ms)
+Completed in 32ms (View: 18, DB: 2) | 200 OK [http://localhost/contacts/display_new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:46:33) [GET]
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 13ms (View: 7, DB: 1) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:46:36) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mContact Columns (11.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+ERROR: compiling _run_erb_app47views47contacts47_form46html46erb_locals_form_object RAISED compile error
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:5: syntax error, unexpected tSTRING_BEG, expecting ')'
+...uffer.concat(( f.label :name 'Name:    ').to_s); @output_buf...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :company 'Company: ').to_s); @output_buf...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_bu...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :address 'Address: ' ).to_s); @output_bu...
+                              ^
+Function body:           def _run_erb_app47views47contacts47_form46html46erb_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  remote_form_for @contact do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.submit 'Save' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } ).to_s); @output_buffer.concat "\n<div>\n  "
+
+; @output_buffer.concat(( f.label :name 'Name:    ').to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :name ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :company 'Company: ').to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :company ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :address 'Address: ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :group_id ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.collection_select(:group_id, @groups, :id, :title, {:prompt => true}) ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:30:in `compile!'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:20:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:19:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/partials.rb:184:in `render_partial'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:267:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:993:in `render'
+/Users/urzuae/rails/rolodex/vendor/plugins/jrails/lib/jrails.rb:79:in `insert_html'
+/Users/urzuae/rails/rolodex/vendor/plugins/jrails/lib/jrails.rb:83:in `replace_html'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:90
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:578:in `instance_exec'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:578:in `initialize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:577:in `initialize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:979:in `new'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:979:in `render_without_benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:89
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:87:in `display_new'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/commands/server.rb:111
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:5: syntax error, unexpected tSTRING_BEG, expecting ')'
+...uffer.concat(( f.label :name 'Name:    ').to_s); @output_buf...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :company 'Company: ').to_s); @output_buf...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_bu...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :address 'Address: ' ).to_s); @output_bu...
+                              ^) on line #5 of app/views/contacts/_form.html.erb:
+2:   <%= f.submit 'Save' %>
+3:   <%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>
+4: <div>
+5:   <%= f.label :name 'Name:    '%>
+6:   <%= f.text_field :name %>
+7: </div>
+8: <div>
+
+    app/views/contacts/_form.html.erb:30:in `compile!'
+    app/controllers/contacts_controller.rb:90
+    app/controllers/contacts_controller.rb:89
+    app/controllers/contacts_controller.rb:87:in `display_new'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 21:46:37) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+
+ActionView::MissingTemplate (Missing template contacts/show_all_contacts.erb in view path app/views):
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:46:38) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+ERROR: compiling _run_erb_app47views47contacts47_form46html46erb_locals_form_object RAISED compile error
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:5: syntax error, unexpected tSTRING_BEG, expecting ')'
+...uffer.concat(( f.label :name 'Name:    ').to_s); @output_buf...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :company 'Company: ').to_s); @output_buf...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_bu...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :address 'Address: ' ).to_s); @output_bu...
+                              ^
+Function body:           def _run_erb_app47views47contacts47_form46html46erb_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  remote_form_for @contact do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.submit 'Save' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } ).to_s); @output_buffer.concat "\n<div>\n  "
+
+; @output_buffer.concat(( f.label :name 'Name:    ').to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :name ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :company 'Company: ').to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :company ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :address 'Address: ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :group_id ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.collection_select(:group_id, @groups, :id, :title, {:prompt => true}) ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:30:in `compile!'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:20:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:19:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/partials.rb:184:in `render_partial'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:267:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:993:in `render'
+/Users/urzuae/rails/rolodex/vendor/plugins/jrails/lib/jrails.rb:79:in `insert_html'
+/Users/urzuae/rails/rolodex/vendor/plugins/jrails/lib/jrails.rb:83:in `replace_html'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:90
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:578:in `instance_exec'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:578:in `initialize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:577:in `initialize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:979:in `new'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:979:in `render_without_benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:89
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:87:in `display_new'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/commands/server.rb:111
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:5: syntax error, unexpected tSTRING_BEG, expecting ')'
+...uffer.concat(( f.label :name 'Name:    ').to_s); @output_buf...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :company 'Company: ').to_s); @output_buf...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_bu...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :address 'Address: ' ).to_s); @output_bu...
+                              ^) on line #5 of app/views/contacts/_form.html.erb:
+2:   <%= f.submit 'Save' %>
+3:   <%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>
+4: <div>
+5:   <%= f.label :name 'Name:    '%>
+6:   <%= f.text_field :name %>
+7: </div>
+8: <div>
+
+    app/views/contacts/_form.html.erb:30:in `compile!'
+    app/controllers/contacts_controller.rb:90
+    app/controllers/contacts_controller.rb:89
+    app/controllers/contacts_controller.rb:87:in `display_new'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (154.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:47:10) [GET]
+  [4;36;1mContact Load (4.6ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.5ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 20ms (View: 6, DB: 6) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:47:12) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Columns (6.7ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+ERROR: compiling _run_erb_app47views47contacts47_form46html46erb_locals_form_object RAISED compile error
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:5: syntax error, unexpected tSTRING_BEG, expecting ')'
+...uffer.concat(( f.label :name 'Name :    ' ).to_s); @output_b...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :company 'Company : ' ).to_s); @output_b...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_bu...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :address 'Address: ' ).to_s); @output_bu...
+                              ^
+Function body:           def _run_erb_app47views47contacts47_form46html46erb_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  remote_form_for @contact do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.submit 'Save' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } ).to_s); @output_buffer.concat "\n<div>\n  "
+
+; @output_buffer.concat(( f.label :name 'Name :    ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :name ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :company 'Company : ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :company ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :address 'Address: ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :group_id ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.collection_select(:group_id, @groups, :id, :title, {:prompt => true}) ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:30:in `compile!'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:20:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:19:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/partials.rb:184:in `render_partial'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:267:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:993:in `render'
+/Users/urzuae/rails/rolodex/vendor/plugins/jrails/lib/jrails.rb:79:in `insert_html'
+/Users/urzuae/rails/rolodex/vendor/plugins/jrails/lib/jrails.rb:83:in `replace_html'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:90
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:578:in `instance_exec'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:578:in `initialize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:577:in `initialize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:979:in `new'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:979:in `render_without_benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:89
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:87:in `display_new'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/commands/server.rb:111
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:5: syntax error, unexpected tSTRING_BEG, expecting ')'
+...uffer.concat(( f.label :name 'Name :    ' ).to_s); @output_b...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :company 'Company : ' ).to_s); @output_b...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_bu...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :address 'Address: ' ).to_s); @output_bu...
+                              ^) on line #5 of app/views/contacts/_form.html.erb:
+2:   <%= f.submit 'Save' %>
+3:   <%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>
+4: <div>
+5:   <%= f.label :name 'Name :    ' %>
+6:   <%= f.text_field :name %>
+7: </div>
+8: <div>
+
+    app/views/contacts/_form.html.erb:30:in `compile!'
+    app/controllers/contacts_controller.rb:90
+    app/controllers/contacts_controller.rb:89
+    app/controllers/contacts_controller.rb:87:in `display_new'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:47:15) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:47:16) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Load (5.8ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+ERROR: compiling _run_erb_app47views47contacts47_form46html46erb_locals_form_object RAISED compile error
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :company 'Company : ' ).to_s); @output_b...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_bu...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :address 'Address: ' ).to_s); @output_bu...
+                              ^
+Function body:           def _run_erb_app47views47contacts47_form46html46erb_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;form = local_assigns[:form];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  remote_form_for @contact do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.submit 'Save' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } ).to_s); @output_buffer.concat "\n<div>\n  "
+
+; @output_buffer.concat(( f.label :name, 'Name :    ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :name ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :company 'Company : ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :company ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :address 'Address: ' ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n</div>\n<div>\n  "
+
+
+; @output_buffer.concat(( f.label :group_id ).to_s); @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.collection_select(:group_id, @groups, :id, :title, {:prompt => true}) ).to_s); @output_buffer.concat "\n</div>\n\n"
+
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:30:in `compile!'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:20:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:19:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:44:in `render_partial'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/partials.rb:184:in `render_partial'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/base.rb:267:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:993:in `render'
+/Users/urzuae/rails/rolodex/vendor/plugins/jrails/lib/jrails.rb:79:in `insert_html'
+/Users/urzuae/rails/rolodex/vendor/plugins/jrails/lib/jrails.rb:83:in `replace_html'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:90
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:578:in `instance_exec'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:578:in `initialize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/capture_helper.rb:129:in `with_output_buffer'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_view/helpers/prototype_helper.rb:577:in `initialize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:979:in `new'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:979:in `render_without_benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:89
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/urzuae/rails/rolodex/app/controllers/contacts_controller.rb:87:in `display_new'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/Users/urzuae/.rvm/gems/ruby-1.8.7-p249/gems/rails-2.3.5/lib/commands/server.rb:111
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :company 'Company : ' ).to_s); @output_b...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:13: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ffer.concat(( f.label :phone 'Phone:   ' ).to_s); @output_bu...
+                              ^
+/Users/urzuae/rails/rolodex/app/views/contacts/_form.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...er.concat(( f.label :address 'Address: ' ).to_s); @output_bu...
+                              ^) on line #9 of app/views/contacts/_form.html.erb:
+6:   <%= f.text_field :name %>
+7: </div>
+8: <div>
+9:   <%= f.label :company 'Company : ' %>
+10:   <%= f.text_field :company %>
+11: </div>
+12: <div>
+
+    app/views/contacts/_form.html.erb:30:in `compile!'
+    app/controllers/contacts_controller.rb:90
+    app/controllers/contacts_controller.rb:89
+    app/controllers/contacts_controller.rb:87:in `display_new'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (69.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:47:39) [GET]
+  [4;36;1mContact Load (0.4ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (1.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 15ms (View: 5, DB: 8) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:47:40) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Load (2.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_form (11.1ms)
+Completed in 29ms (View: 16, DB: 5) | 200 OK [http://localhost/contacts/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:47:59) [GET]
+  [4;36;1mContact Load (7.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.8ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 24ms (View: 7, DB: 8) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:48:01) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_form (11.3ms)
+Completed in 30ms (View: 19, DB: 2) | 200 OK [http://localhost/contacts/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:48:17) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 28ms (View: 6, DB: 1) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:48:19) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Load (1.6ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Columns (9.8ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_form (9.5ms)
+Completed in 35ms (View: 14, DB: 12) | 200 OK [http://localhost/contacts/display_new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2010-06-22 21:49:36) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"asdfasdf", "company"=>"asdf", "name"=>"asdf", "group_id"=>"", "phone"=>"1343214"}}
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mContact Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (49.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Create (0.3ms)[0m   [0mINSERT INTO `contacts` (`name`, `company`, `address`, `created_at`, `updated_at`, `group_id`, `phone`) VALUES('asdf', 'asdf', 'asdfasdf', '2010-06-23 02:49:36', '2010-06-23 02:49:36', NULL, '1343214')[0m
+  [4;36;1mSQL (41.9ms)[0m   [0;1mCOMMIT[0m
+
+ActionView::TemplateError (undefined method `name' for []:Array) on line #2 of app/views/contacts/_contact.html.erb:
+1: <div class="contact_item">
+2:   <%= link_to_remote contact.name, :url => {:controller => "contacts", :action => :display_contact, :id => contact.id} %>
+3: </div>
+
+    app/views/contacts/_contact.html.erb:2
+    app/controllers/contacts_controller.rb:16
+    app/controllers/contacts_controller.rb:10
+    app/controllers/contacts_controller.rb:8:in `create'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (106.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2010-06-22 21:49:43) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"asdfasdf", "company"=>"asdf", "name"=>"asdf", "group_id"=>"", "phone"=>"1343214"}}
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mContact Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (50.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContact Create (0.2ms)[0m   [0;1mINSERT INTO `contacts` (`name`, `company`, `address`, `created_at`, `updated_at`, `group_id`, `phone`) VALUES('asdf', 'asdf', 'asdfasdf', '2010-06-23 02:49:43', '2010-06-23 02:49:43', NULL, '1343214')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+
+ActionView::TemplateError (undefined method `name' for #<Array:0x101e38288>) on line #2 of app/views/contacts/_contact.html.erb:
+1: <div class="contact_item">
+2:   <%= link_to_remote contact.name, :url => {:controller => "contacts", :action => :display_contact, :id => contact.id} %>
+3: </div>
+
+    app/views/contacts/_contact.html.erb:2
+    app/controllers/contacts_controller.rb:16
+    app/controllers/contacts_controller.rb:10
+    app/controllers/contacts_controller.rb:8:in `create'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (106.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:50:14) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 21:50:16) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_contact (1.2ms)
+Rendered contacts/_contact (0.7ms)
+Completed in 12ms (View: 3, DB: 2) | 200 OK [http://localhost/contacts/show_all_contacts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:51:12) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:51:13) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_form (92.0ms)
+Completed in 106ms (View: 96, DB: 2) | 200 OK [http://localhost/contacts/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2010-06-22 21:51:23) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"villade", "company"=>"qwer", "name"=>"qwer", "group_id"=>"", "phone"=>"12345"}}
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mContact Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (41.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Create (0.3ms)[0m   [0mINSERT INTO `contacts` (`name`, `company`, `address`, `created_at`, `updated_at`, `group_id`, `phone`) VALUES('qwer', 'qwer', 'villade', '2010-06-23 02:51:23', '2010-06-23 02:51:23', NULL, '12345')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+
+ActionView::TemplateError (undefined method `name' for #<Array:0x101f52448>) on line #2 of app/views/contacts/_contact.html.erb:
+1: <div class="contact_item">
+2:   <%= link_to_remote contact.name, :url => {:controller => "contacts", :action => :display_contact, :id => contact.id} %>
+3: </div>
+
+    app/views/contacts/_contact.html.erb:2
+    app/controllers/contacts_controller.rb:16
+    app/controllers/contacts_controller.rb:10
+    app/controllers/contacts_controller.rb:8:in `create'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (107.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:52:49) [GET]
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:52:51) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mContact Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_form (7.4ms)
+Completed in 17ms (View: 9, DB: 2) | 200 OK [http://localhost/contacts/display_new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2010-06-22 21:52:59) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"poiu", "company"=>"poiu", "name"=>"poiu", "group_id"=>"", "phone"=>"12345"}}
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mContact Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (42.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mContact Create (0.3ms)[0m   [0;1mINSERT INTO `contacts` (`name`, `company`, `address`, `created_at`, `updated_at`, `group_id`, `phone`) VALUES('poiu', 'poiu', 'poiu', '2010-06-23 02:52:59', '2010-06-23 02:52:59', NULL, '12345')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+
+ActionView::TemplateError (undefined method `name' for #<Array:0x101553668>) on line #2 of app/views/contacts/_contact.html.erb:
+1: <div class="contact_item">
+2:   <%= link_to_remote contact.name, :url => {:controller => "contacts", :action => :display_contact, :id => contact.id} %>
+3: </div>
+
+    app/views/contacts/_contact.html.erb:2
+    app/controllers/contacts_controller.rb:16
+    app/controllers/contacts_controller.rb:10
+    app/controllers/contacts_controller.rb:8:in `create'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:53:26) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:53:28) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_form (7.7ms)
+Completed in 106ms (View: 97, DB: 2) | 200 OK [http://localhost/contacts/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2010-06-22 21:53:38) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"qerg", "company"=>"waefs", "name"=>"awer", "group_id"=>"", "phone"=>"1234"}}
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mContact Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Create (0.2ms)[0m   [0mINSERT INTO `contacts` (`name`, `company`, `address`, `created_at`, `updated_at`, `group_id`, `phone`) VALUES('awer', 'waefs', 'qerg', '2010-06-23 02:53:38', '2010-06-23 02:53:38', NULL, '1234')[0m
+  [4;36;1mSQL (21.8ms)[0m   [0;1mCOMMIT[0m
+Rendered contacts/_contact (1.2ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Completed in 36ms (View: 7, DB: 24) | 200 OK [http://localhost/contacts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#display_new (for 127.0.0.1 at 2010-06-22 21:53:41) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered groups/_form (5.3ms)
+Completed in 76ms (View: 69, DB: 2) | 200 OK [http://localhost/groups/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2010-06-22 21:53:44) [POST]
+  Parameters: {"group"=>{"title"=>"asdfg"}, "authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mSQL (51.6ms)[0m   [0mBEGIN[0m
+  [4;36;1mGroup Create (0.3ms)[0m   [0;1mINSERT INTO `groups` (`created_at`, `title`, `updated_at`) VALUES('2010-06-23 02:53:44', 'asdfg', '2010-06-23 02:53:44')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mContact Load (2.1ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (7.2ms)
+Completed in 70ms (View: 9, DB: 57) | 200 OK [http://localhost/groups]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:53:46) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;35;1mGroup Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (48.5ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_simple_group (3.5ms)
+Completed in 67ms (View: 7, DB: 53) | 200 OK [http://localhost/groups/show_contacts/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:53:48) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mContact Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mGroup Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (64.2ms)
+Completed in 76ms (View: 64, DB: 4) | 200 OK [http://localhost/contacts/display_new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2010-06-22 21:53:57) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"adfg", "company"=>"asdfg", "name"=>"asdgf", "group_id"=>"1", "phone"=>"adsfg"}}
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (45.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Create (0.2ms)[0m   [0mINSERT INTO `contacts` (`name`, `company`, `address`, `created_at`, `updated_at`, `group_id`, `phone`) VALUES('asdgf', 'asdfg', 'adfg', '2010-06-23 02:53:57', '2010-06-23 02:53:57', 1, 'adsfg')[0m
+  [4;36;1mSQL (60.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGroup Load (0.4ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mGroup Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (5.1ms)
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered contacts/_contact (0.9ms)
+Completed in 131ms (View: 15, DB: 110) | 200 OK [http://localhost/contacts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:53:59) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;36;1mGroup Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mGroup Load (45.6ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+  [4;36;1mContact Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+  [4;36;1mContact Load (0.2ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered contacts/_contact (1.4ms)
+Rendered groups/_simple_group (1.6ms)
+Completed in 71ms (View: 8, DB: 54) | 200 OK [http://localhost/groups/show_contacts/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#show_contacts (for 127.0.0.1 at 2010-06-22 21:53:59) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;35;1mGroup Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (1.1ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+  [4;35;1mContact Load (0.2ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered contacts/_contact (1.8ms)
+Rendered groups/_simple_group (2.0ms)
+Completed in 20ms (View: 8, DB: 5) | 200 OK [http://localhost/groups/show_contacts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:54:02) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (44.6ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (49.1ms)
+Completed in 62ms (View: 9, DB: 47) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:55:24) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (45.6ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (49.8ms)
+Completed in 63ms (View: 8, DB: 48) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_new (for 127.0.0.1 at 2010-06-22 21:55:30) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mGroup Columns (44.0ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (53.6ms)
+Completed in 64ms (View: 11, DB: 46) | 200 OK [http://localhost/contacts/display_new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2010-06-22 21:55:36) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"aasdf", "company"=>"asdf", "name"=>"asdf", "group_id"=>"1", "phone"=>"asdf"}}
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mContact Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (46.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContact Create (0.3ms)[0m   [0;1mINSERT INTO `contacts` (`name`, `company`, `address`, `created_at`, `updated_at`, `group_id`, `phone`) VALUES('asdf', 'asdf', 'aasdf', '2010-06-23 02:55:36', '2010-06-23 02:55:36', 1, 'asdf')[0m
+  [4;35;1mSQL (39.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mGroup Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mContact Load (0.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (6.5ms)
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered contacts/_contact (0.9ms)
+Rendered contacts/_contact (0.8ms)
+Completed in 113ms (View: 14, DB: 92) | 200 OK [http://localhost/contacts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 21:55:43) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mContact Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_contact (1.3ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (0.9ms)
+Rendered contacts/_contact (1.2ms)
+Rendered contacts/_contact (2.0ms)
+Rendered contacts/_contact (0.9ms)
+Completed in 20ms (View: 11, DB: 2) | 200 OK [http://localhost/contacts/show_all_contacts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:55:45) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;35;1mContact Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (44.5ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendered contacts/_simple_contact (3.3ms)
+Completed in 59ms (View: 5, DB: 48) | 200 OK [http://localhost/contacts/display_contact/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:55:46) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;35;1mContact Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (52.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mGroup Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (13.2ms)
+Completed in 80ms (View: 16, DB: 56) | 200 OK [http://localhost/contacts/display_edit/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2010-06-22 21:56:54) [PUT]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"", "company"=>"asdf", "name"=>"asdf", "group_id"=>"", "phone"=>"1343214"}, "id"=>"1"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (47.8ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContact Update (35.2ms)[0m   [0;1mUPDATE `contacts` SET `updated_at` = '2010-06-23 02:56:54', `address` = '' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Completed in 97ms (View: 6, DB: 86) | 200 OK [http://localhost/contacts/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2010-06-22 21:56:57) [PUT]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"", "company"=>"asdf", "name"=>"asdf", "group_id"=>"", "phone"=>"1343214"}, "id"=>"1"}
+  [4;36;1mContact Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (52.5ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Completed in 67ms (View: 5, DB: 57) | 200 OK [http://localhost/contacts/1]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2010-06-22 21:57:04) [PUT]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"", "company"=>"asdf", "name"=>"asdf", "group_id"=>"", "phone"=>"1343214"}, "id"=>"1"}
+  [4;36;1mContact Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (1.9ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 19ms (View: 4, DB: 10) | 200 OK [http://localhost/contacts/1]
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 21:57:31) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mContact Load (3.5ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mContact Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_contact (1.4ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (66.5ms)
+Completed in 90ms (View: 74, DB: 7) | 200 OK [http://localhost/contacts/show_all_contacts]
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:32) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;36;1mContact Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (43.2ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendered contacts/_simple_contact (3.4ms)
+Completed in 56ms (View: 5, DB: 48) | 200 OK [http://localhost/contacts/display_contact/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:32) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;36;1mContact Columns (141.1ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (0.7ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+Rendered contacts/_simple_contact (2.2ms)
+Completed in 152ms (View: 4, DB: 142) | 200 OK [http://localhost/contacts/display_contact/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:57:34) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;36;1mContact Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (50.4ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mGroup Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (62.6ms)
+Completed in 124ms (View: 63, DB: 54) | 200 OK [http://localhost/contacts/display_edit/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:35) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;36;1mContact Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (45.2ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+Rendered contacts/_simple_contact (2.1ms)
+Completed in 55ms (View: 3, DB: 47) | 200 OK [http://localhost/contacts/display_contact/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:57:36) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;36;1mContact Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (47.5ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mGroup Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (13.6ms)
+Completed in 77ms (View: 14, DB: 53) | 200 OK [http://localhost/contacts/display_edit/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:38) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;36;1mContact Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (49.6ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendered contacts/_simple_contact (2.8ms)
+Completed in 64ms (View: 4, DB: 52) | 200 OK [http://localhost/contacts/display_contact/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:57:38) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;36;1mContact Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (46.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mGroup Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (11.0ms)
+Completed in 69ms (View: 11, DB: 50) | 200 OK [http://localhost/contacts/display_edit/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:39) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"7"}
+  [4;36;1mContact Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (50.2ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 7) [0m
+Rendered contacts/_simple_contact (3.1ms)
+Completed in 63ms (View: 4, DB: 52) | 200 OK [http://localhost/contacts/display_contact/7]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:57:40) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"7"}
+  [4;36;1mContact Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (50.5ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 7) [0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mGroup Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (10.2ms)
+Completed in 72ms (View: 10, DB: 55) | 200 OK [http://localhost/contacts/display_edit/7]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:42) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"6"}
+  [4;36;1mContact Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (46.1ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 6) [0m
+Rendered contacts/_simple_contact (2.4ms)
+Completed in 59ms (View: 4, DB: 48) | 200 OK [http://localhost/contacts/display_contact/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:57:43) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"6"}
+  [4;36;1mContact Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (46.9ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 6) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mGroup Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (68.8ms)
+Completed in 127ms (View: 67, DB: 52) | 200 OK [http://localhost/contacts/display_edit/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:46) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;36;1mContact Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (48.3ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendered contacts/_simple_contact (2.5ms)
+Completed in 66ms (View: 4, DB: 50) | 200 OK [http://localhost/contacts/display_contact/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:57:48) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;36;1mContact Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (53.2ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mGroup Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (10.8ms)
+Completed in 76ms (View: 11, DB: 57) | 200 OK [http://localhost/contacts/display_edit/1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:49) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;36;1mContact Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (43.4ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+Rendered contacts/_simple_contact (2.9ms)
+Completed in 57ms (View: 4, DB: 46) | 200 OK [http://localhost/contacts/display_contact/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:57:50) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;36;1mContact Columns (8.9ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (43.7ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+  [4;36;1mGroup Load (1.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mGroup Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (13.0ms)
+Completed in 82ms (View: 13, DB: 56) | 200 OK [http://localhost/contacts/display_edit/2]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2010-06-22 21:57:54) [PUT]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"", "company"=>"asdf", "name"=>"asdf", "group_id"=>"", "phone"=>"1343214"}, "id"=>"2"}
+  [4;36;1mContact Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (47.6ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Update (0.8ms)[0m   [0mUPDATE `contacts` SET `updated_at` = '2010-06-23 02:57:54', `address` = '' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 62ms (View: 5, DB: 52) | 200 OK [http://localhost/contacts/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:56) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;35;1mContact Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (52.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+Rendered contacts/_simple_contact (2.8ms)
+Completed in 63ms (View: 4, DB: 54) | 200 OK [http://localhost/contacts/display_contact/2]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:57) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"7"}
+  [4;35;1mContact Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (45.9ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 7) [0m
+Rendered contacts/_simple_contact (2.6ms)
+Completed in 60ms (View: 4, DB: 49) | 200 OK [http://localhost/contacts/display_contact/7]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:57:58) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (52.2ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+Rendered contacts/_simple_contact (2.8ms)
+Completed in 64ms (View: 6, DB: 54) | 200 OK [http://localhost/contacts/display_contact/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:57:58) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;35;1mContact Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (141.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mGroup Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (10.7ms)
+Completed in 169ms (View: 12, DB: 146) | 200 OK [http://localhost/contacts/display_edit/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:58:44) [GET]
+  [4;35;1mContact Load (4.0ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.4ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;35;1mGroup Columns (3.8ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mContact Load (46.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (53.9ms)
+Completed in 75ms (View: 11, DB: 55) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 21:58:45) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mContact Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_contact (1.9ms)
+Rendered contacts/_contact (1.0ms)
+Rendered contacts/_contact (0.9ms)
+Rendered contacts/_contact (0.9ms)
+Rendered contacts/_contact (2.2ms)
+Rendered contacts/_contact (0.9ms)
+Rendered contacts/_contact (0.8ms)
+Completed in 22ms (View: 13, DB: 2) | 200 OK [http://localhost/contacts/show_all_contacts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:58:47) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (51.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+Rendered contacts/_simple_contact (2.4ms)
+Completed in 65ms (View: 5, DB: 53) | 200 OK [http://localhost/contacts/display_contact/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:58:48) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mContact Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (45.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+  [4;35;1mGroup Load (1.2ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mGroup Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (14.7ms)
+Completed in 89ms (View: 15, DB: 50) | 200 OK [http://localhost/contacts/display_edit/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2010-06-22 21:58:51) [PUT]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"", "company"=>"qwer", "name"=>"qwer", "group_id"=>"", "phone"=>"12345"}, "id"=>"3"}
+  [4;35;1mContact Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (47.8ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContact Update (0.3ms)[0m   [0;1mUPDATE `contacts` SET `updated_at` = '2010-06-23 02:58:51', `address` = '' WHERE `id` = 3[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCOMMIT[0m
+Completed in 69ms (View: 4, DB: 54) | 200 OK [http://localhost/contacts/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 21:58:55) [GET]
+  [4;36;1mContact Load (0.3ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mGroup Load (0.2ms)[0m   [0mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;36;1mGroup Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+  [4;35;1mContact Load (47.1ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (55.2ms)
+Completed in 67ms (View: 9, DB: 53) | 200 OK [http://localhost/groups/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 21:58:56) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;36;1mContact Load (0.9ms)[0m   [0;1mSELECT * FROM `contacts` [0m
+  [4;35;1mContact Columns (87.2ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_contact (1.3ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (1.1ms)
+Rendered contacts/_contact (0.9ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (0.8ms)
+Completed in 104ms (View: 9, DB: 88) | 200 OK [http://localhost/contacts/show_all_contacts]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:58:57) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;36;1mContact Columns (4.6ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (0.7ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+Rendered contacts/_simple_contact (2.2ms)
+Completed in 15ms (View: 3, DB: 5) | 200 OK [http://localhost/contacts/display_contact/3]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:58:58) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;36;1mContact Columns (74.1ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (3.1ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+  [4;36;1mGroup Load (0.3ms)[0m   [0;1mSELECT * FROM `groups` [0m
+  [4;35;1mGroup Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (11.6ms)
+Completed in 101ms (View: 11, DB: 80) | 200 OK [http://localhost/contacts/display_edit/3]
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#update (for 127.0.0.1 at 2010-06-22 21:59:03) [PUT]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "contact"=>{"address"=>"", "company"=>"qwer", "name"=>"qwer", "group_id"=>"", "phone"=>""}, "id"=>"3"}
+  [4;36;1mContact Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mContact Load (47.0ms)[0m   [0mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContact Update (0.3ms)[0m   [0mUPDATE `contacts` SET `phone` = '', `updated_at` = '2010-06-23 02:59:03' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 62ms (View: 5, DB: 51) | 200 OK [http://localhost/contacts/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 21:59:05) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mContact Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (50.5ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+Rendered contacts/_simple_contact (2.7ms)
+Completed in 62ms (View: 4, DB: 52) | 200 OK [http://localhost/contacts/display_contact/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 21:59:06) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mContact Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (46.2ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+  [4;35;1mGroup Load (0.6ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mGroup Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (10.5ms)
+Completed in 140ms (View: 11, DB: 51) | 200 OK [http://localhost/contacts/display_edit/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 22:00:38) [GET]
+  [4;35;1mContact Load (0.4ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;35;1mGroup Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mContact Load (43.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (47.9ms)
+Completed in 60ms (View: 9, DB: 46) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 22:00:40) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mContact Load (0.4ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mContact Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_contact (1.4ms)
+Rendered contacts/_contact (1.0ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (1.0ms)
+Rendered contacts/_contact (0.9ms)
+Completed in 18ms (View: 10, DB: 2) | 200 OK [http://localhost/contacts/show_all_contacts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:40) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (51.5ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendered contacts/_simple_contact (3.1ms)
+Completed in 65ms (View: 7, DB: 53) | 200 OK [http://localhost/contacts/display_contact/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:42) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (3.3ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+Rendered contacts/_simple_contact (2.3ms)
+Completed in 57ms (View: 3, DB: 5) | 200 OK [http://localhost/contacts/display_contact/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:43) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"7"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (49.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 7) [0m
+  [4;35;1mGroup Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+Rendered contacts/_simple_contact (58.7ms)
+Completed in 116ms (View: 56, DB: 55) | 200 OK [http://localhost/contacts/display_contact/7]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:44) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"6"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (51.9ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 6) [0m
+  [4;35;1mGroup Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (1.2ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+Rendered contacts/_simple_contact (8.8ms)
+Completed in 68ms (View: 7, DB: 57) | 200 OK [http://localhost/contacts/display_contact/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:45) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"5"}
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (44.6ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 5) [0m
+Rendered contacts/_simple_contact (2.9ms)
+Completed in 56ms (View: 4, DB: 46) | 200 OK [http://localhost/contacts/display_contact/5]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:47) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mContact Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (52.9ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+Rendered contacts/_simple_contact (2.7ms)
+Completed in 64ms (View: 4, DB: 55) | 200 OK [http://localhost/contacts/display_contact/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:48) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (44.6ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+Rendered contacts/_simple_contact (2.9ms)
+Completed in 56ms (View: 4, DB: 46) | 200 OK [http://localhost/contacts/display_contact/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:48) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"4"}
+  [4;35;1mContact Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (52.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 4) [0m
+Rendered contacts/_simple_contact (2.9ms)
+Completed in 64ms (View: 4, DB: 54) | 200 OK [http://localhost/contacts/display_contact/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:49) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"5"}
+  [4;35;1mContact Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (50.5ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 5) [0m
+Rendered contacts/_simple_contact (2.4ms)
+Completed in 118ms (View: 4, DB: 53) | 200 OK [http://localhost/contacts/display_contact/5]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:50) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"6"}
+  [4;35;1mContact Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (50.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 6) [0m
+  [4;35;1mGroup Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (1.5ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+Rendered contacts/_simple_contact (10.2ms)
+Completed in 69ms (View: 8, DB: 55) | 200 OK [http://localhost/contacts/display_contact/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:51) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"7"}
+  [4;35;1mContact Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (45.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 7) [0m
+  [4;35;1mGroup Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (1.4ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+Rendered contacts/_simple_contact (10.1ms)
+Completed in 64ms (View: 9, DB: 50) | 200 OK [http://localhost/contacts/display_contact/7]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:00:52) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"6"}
+  [4;35;1mContact Columns (9.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (9.7ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 6) [0m
+  [4;35;1mGroup Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (2.9ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+Rendered contacts/_simple_contact (11.1ms)
+Completed in 37ms (View: 7, DB: 25) | 200 OK [http://localhost/contacts/display_contact/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 22:00:54) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"6"}
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (52.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 6) [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mGroup Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (8.8ms)
+Completed in 73ms (View: 9, DB: 56) | 200 OK [http://localhost/contacts/display_edit/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 22:01:01) [GET]
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.2ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;35;1mGroup Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mContact Load (41.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (45.6ms)
+Completed in 58ms (View: 8, DB: 43) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 22:01:03) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mContact Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_contact (1.3ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.8ms)
+Completed in 15ms (View: 8, DB: 2) | 200 OK [http://localhost/contacts/show_all_contacts]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:01:03) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;35;1mContact Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (50.9ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #7 of app/views/contacts/_simple_contact.html.erb:
+4:   Company: <%= simple_contact.company %><br/>
+5:   Phone: <%= simple_contact.phone %><br/>
+6:   Address: <%= simple_contact.address %><br/>
+7:   Group: <%= simple_contact.group.title %><br/>
+8: </div>
+
+    app/views/contacts/_simple_contact.html.erb:7
+    app/controllers/contacts_controller.rb:80
+    app/controllers/contacts_controller.rb:79
+    app/controllers/contacts_controller.rb:77:in `display_contact'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (293.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:01:04) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;35;1mContact Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (1.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #7 of app/views/contacts/_simple_contact.html.erb:
+4:   Company: <%= simple_contact.company %><br/>
+5:   Phone: <%= simple_contact.phone %><br/>
+6:   Address: <%= simple_contact.address %><br/>
+7:   Group: <%= simple_contact.group.title %><br/>
+8: </div>
+
+    app/views/contacts/_simple_contact.html.erb:7
+    app/controllers/contacts_controller.rb:80
+    app/controllers/contacts_controller.rb:79
+    app/controllers/contacts_controller.rb:77:in `display_contact'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (135.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:01:06) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (47.1ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #7 of app/views/contacts/_simple_contact.html.erb:
+4:   Company: <%= simple_contact.company %><br/>
+5:   Phone: <%= simple_contact.phone %><br/>
+6:   Address: <%= simple_contact.address %><br/>
+7:   Group: <%= simple_contact.group.title %><br/>
+8: </div>
+
+    app/views/contacts/_simple_contact.html.erb:7
+    app/controllers/contacts_controller.rb:80
+    app/controllers/contacts_controller.rb:79
+    app/controllers/contacts_controller.rb:77:in `display_contact'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.3ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:01:10) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (47.7ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+
+ActionView::TemplateError (undefined method `title' for nil:NilClass) on line #7 of app/views/contacts/_simple_contact.html.erb:
+4:   Company: <%= simple_contact.company %><br/>
+5:   Phone: <%= simple_contact.phone %><br/>
+6:   Address: <%= simple_contact.address %><br/>
+7:   Group: <%= simple_contact.group.title %><br/>
+8: </div>
+
+    app/views/contacts/_simple_contact.html.erb:7
+    app/controllers/contacts_controller.rb:80
+    app/controllers/contacts_controller.rb:79
+    app/controllers/contacts_controller.rb:77:in `display_contact'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/urzuae/.rvm/rubies/ruby-1.8.7-p249/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (106.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2010-06-22 22:02:32) [GET]
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mGroup Load (0.5ms)[0m   [0;1mSELECT * FROM `groups` [0m
+Rendering template within layouts/application
+Rendering groups/index
+  [4;35;1mGroup Columns (3.7ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mContact Load (0.5ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.group_id = 1) [0m
+Rendered groups/_group (7.7ms)
+Completed in 23ms (View: 9, DB: 5) | 200 OK [http://localhost/groups/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#show_all_contacts (for 127.0.0.1 at 2010-06-22 22:02:34) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao="}
+  [4;35;1mContact Load (0.3ms)[0m   [0mSELECT * FROM `contacts` [0m
+  [4;36;1mContact Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendered contacts/_contact (1.4ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.7ms)
+Rendered contacts/_contact (0.8ms)
+Rendered contacts/_contact (2.3ms)
+Rendered contacts/_contact (1.3ms)
+Completed in 18ms (View: 11, DB: 2) | 200 OK [http://localhost/contacts/show_all_contacts]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:02:34) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"1"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (47.2ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 1) [0m
+Rendered contacts/_simple_contact (3.6ms)
+Completed in 62ms (View: 8, DB: 49) | 200 OK [http://localhost/contacts/display_contact/1]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:02:35) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (52.8ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+Rendered contacts/_simple_contact (2.5ms)
+Completed in 121ms (View: 4, DB: 55) | 200 OK [http://localhost/contacts/display_contact/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:02:36) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"7"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (53.4ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 7) [0m
+  [4;35;1mGroup Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (0.9ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+Rendered contacts/_simple_contact (9.2ms)
+Completed in 71ms (View: 8, DB: 57) | 200 OK [http://localhost/contacts/display_contact/7]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:02:38) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"2"}
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (50.1ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 2) [0m
+Rendered contacts/_simple_contact (2.8ms)
+Completed in 61ms (View: 4, DB: 52) | 200 OK [http://localhost/contacts/display_contact/2]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:02:39) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"6"}
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (47.0ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 6) [0m
+  [4;35;1mGroup Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `groups`[0m
+  [4;36;1mGroup Load (1.0ms)[0m   [0;1mSELECT * FROM `groups` WHERE (`groups`.`id` = 1) [0m
+Rendered contacts/_simple_contact (9.7ms)
+Completed in 64ms (View: 8, DB: 51) | 200 OK [http://localhost/contacts/display_contact/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:02:39) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"5"}
+  [4;35;1mContact Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (47.9ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 5) [0m
+Rendered contacts/_simple_contact (2.8ms)
+Completed in 59ms (View: 4, DB: 50) | 200 OK [http://localhost/contacts/display_contact/5]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:02:40) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"4"}
+  [4;35;1mContact Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (75.5ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 4) [0m
+Rendered contacts/_simple_contact (2.2ms)
+Completed in 85ms (View: 3, DB: 77) | 200 OK [http://localhost/contacts/display_contact/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_contact (for 127.0.0.1 at 2010-06-22 22:02:41) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mContact Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (51.8ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+Rendered contacts/_simple_contact (2.4ms)
+Completed in 62ms (View: 4, DB: 53) | 200 OK [http://localhost/contacts/display_contact/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ContactsController#display_edit (for 127.0.0.1 at 2010-06-22 22:02:42) [POST]
+  Parameters: {"authenticity_token"=>"YFa0uJbdCNt2V3EqV6ZeRMKj87Fm786tnKGvXqkGtao=", "id"=>"3"}
+  [4;35;1mContact Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mContact Load (51.7ms)[0m   [0;1mSELECT * FROM `contacts` WHERE (`contacts`.`id` = 3) [0m
+  [4;35;1mGroup Load (0.3ms)[0m   [0mSELECT * FROM `groups` [0m
+  [4;36;1mGroup Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `groups`[0m
+Rendered contacts/_form (13.5ms)
+Completed in 81ms (View: 14, DB: 55) | 200 OK [http://localhost/contacts/display_edit/3]

@@ -1,5 +1,12 @@
 <%= button_to_remote 'Edit', :url => {:controller => "contacts", :action => :display_edit, :id => simple_contact.id} %>
 <div>
-  <%= simple_contact.name %>
-  <%= simple_contact.company %>
+  Name: <%= simple_contact.name %><br/>
+  Company: <%= simple_contact.company %><br/>
+  Phone: <%= simple_contact.phone %><br/>
+  Address: <%= simple_contact.address %><br/>
+  <% if simple_contact.group == nil %>
+    Group: <br/>
+  <% else %>
+    Group: <%= simple_contact.group.title %><br/>
+  <% end %>
 </div>

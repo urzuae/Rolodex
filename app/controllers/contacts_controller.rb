@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
               page.replace_html 'groups_container', :partial => 'groups/group', :collection => Group.all
               page.replace_html 'contacts_container', :partial => @contact.group.contacts.sort!{|f,g| f.name <=> g.name}
             else
-              page.replace_html 'contacts_list', :partial => 'contacts/contact', :object => @contacts
+              page.replace_html 'contacts_container', :partial => 'contacts/contact', :collection => @contacts
             end
             page.replace 'edit_container', '<div id="edit_container"></div>'
           else
@@ -29,7 +29,8 @@ class ContactsController < ApplicationController
       format.js do
         render :update do |page|
           if @contact.update_attributes(params[:contact])
-            page.alert("Contact can not be saved")
+            page.replace 'edit_container', '<div id="edit_container"></div>'
+            page.alert("Contact edited")
           end
         end
       end
