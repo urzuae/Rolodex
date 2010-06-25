@@ -1,0 +1,11 @@
+<div id="edit_container">
+<%= button_to_remote 'Edit group', :url => {:controller => "groups", :action => :display_edit, :id => simple_group.id} %>
+<%= link_to_remote 'Delete group', :url => {:controller => "groups", :action => :destroy_group, :id => simple_group.id} %>
+<div class="group_name">
+  <h3><%= simple_group.title %></h3>
+  <% if simple_group.contacts.length == 0 %>
+    <p>No contacts</p>
+  <% else %>
+    <p><%= simple_group.contacts.length %> Contacts</p>
+  <% end %>
+</div>

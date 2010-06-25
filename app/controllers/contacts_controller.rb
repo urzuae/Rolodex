@@ -3,12 +3,12 @@ class ContactsController < ApplicationController
   before_filter :find_groups, :only => [:display_edit, :display_new]
   
   def create
-    @contacts = Contact.all
     @contact = Contact.new(params[:contact])
     respond_to do |format|
       format.js do
         render :update do |page|
           if @contact.save
+            @contacts = Contact.all
             unless @contact.group_id == nil
               page.replace_html 'groups_container', :partial => 'groups/group', :collection => Group.all
               page.replace_html 'contacts_container', :partial => @contact.group.contacts.sort!{|f,g| f.name <=> g.name}
@@ -16,6 +16,7 @@ class ContactsController < ApplicationController
               page.replace_html 'contacts_container', :partial => 'contacts/contact', :collection => @contacts
             end
             page.replace 'edit_container', '<div id="edit_container"></div>'
+            page.replace_html 'contacts_length', "#{Contact.all.length}"
           else
             page.alert("Contact can not be saved")
           end
@@ -31,18 +32,28 @@ class ContactsController < ApplicationController
           if @contact.update_attributes(params[:contact])
             page.replace 'edit_container', '<div id="edit_container"></div>'
             page.alert("Contact edited")
+          else
+            page.alert("Contact not edited")
           end
         end
       end
     end
   end
   
-  def destroy
+  def destroy_single_contact
+    @contact = Contact.find(params[:id])
+    unless @contact.group_id == nil
+      @group = @contact.group
+    end
     @contact.destroy
+    @contacts = Contact.all
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.alert("deleted")
+          page.replace_html 'groups_container', :partial => 'groups/group', :collection => Group.all
+          page.replace_html 'contacts_container', :partial => @contacts
+          page.replace 'edit_container', '<div id="edit_container"></div>'
+          page.replace_html 'contacts_length', "#{@contacts.length}"
         end
       end
     end
@@ -94,22 +105,32 @@ class ContactsController < ApplicationController
     end
   end
   def show_filter
-    r = Regexp.new(/str/i)
     results = ""
     @contacts = Contact.all
     respond_to do |format|
       format.js do
         @contacts.each do |f|
-          render :update do |page|
-            if f.name =~ r
-              results += f.name + "\n"
-              page.replace_html "search_results", "#{results}"
-            end
+          if f.name != nil
+            results += f.name + " "
           end
+        end
+        render :update do |page|
+          page.replace_html "search_results", "#{results}"
         end
       end
     end
   end
+  def contacts_name
+    @contacts = Contact.all
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          page.replace_html 'search_results', :partial => '/contacts/contacts_name', :collection => @contacts
+        end
+      end
+    end
+  end
+  
   def find_contact
     @contact = Contact.find(params[:id])
   end

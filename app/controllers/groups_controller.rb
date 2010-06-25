@@ -6,13 +6,12 @@ class GroupsController < ApplicationController
   end
   
   def create
-    @groups = Group.all
     @group = Group.new(params[:group])
     respond_to do |format|
       format.js do
         render :update do |page|
           if @group.save
-            page.replace_html'groups_container', :partial => 'groups/group', :colelction => @groups
+            page.insert_html :bottom, 'groups_container', :partial => 'groups/group', :object => @group
             page.replace 'edit_container', '<div id="edit_container"></div>'
           else
             page.alert("Group can not be created")
@@ -34,7 +33,7 @@ class GroupsController < ApplicationController
           else
             page.replace 'contacts_container', '<div id="contacts_container"></div>'
           end
-          page.replace_html 'edit_group_container', :partial => "/groups/simple_group", :object => @group
+          page.replace 'edit_container', :partial => "/groups/simple_group", :object => @group
         end
       end
     end

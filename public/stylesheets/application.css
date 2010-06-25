@@ -83,3 +83,8 @@ body {
   min-width: 200px;
   min-height: 400px;
 }
+
+#contacts_footer {
+  display: block;
+  float: left;
+}

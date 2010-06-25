@@ -11,17 +11,20 @@
     </div>
   </div>
 </div>
-<div>
-  <div id="contacts_list">
-    <div id="contacts_title">
-        <%= link_to_remote 'My Contacts', :url => {:controller => 'contacts', :action => :show_all_contacts} %>
-        <%= @contacts.length %>
-      <div class="plus_button"><%= button_to_remote '+', :url => {:controller => "contacts", :action => :display_new } %>
-      </div>
+<div id="contacts_list" >
+  <div id="contacts_title">
+      <%= link_to_remote 'My Contacts', :url => {:controller => 'contacts', :action => :show_all_contacts} %>
+    <div id="contacts_length"><%= @contacts.length %></div>
+    <div class="plus_button"><%= button_to_remote '+', :url => {:controller => "contacts", :action => :display_new } %>
     </div>
-    <div id="contacts_container">
-    </div>
-    </div>
+  </div>
+  <div id="contacts_container">
+  </div>
+  <div id="contacts_footer">
+    Select:
+    <a id="select_all" href='#'>All</a>,
+    <a id="select_none" href='#'>None</a>,
+    <%= link_to_remote 'Delete', :url => {:controller => "contacts_manager", :action => :delete} %>
   </div>
 </div>
 <div id="edit_form">
@@ -32,17 +35,26 @@
 </div>
 <div id="searcher">
   <div id="searcher_title">
-    <input id="search_field" type="hidden" value='<% @contacts_list %>'/>
     <input id="searching" type="text"/>
-    <div id="search_results">
-    </div>
+    <input id="search_results" type='hidden'/>
   </div>
+  <input id="search_filter" type="text"/>
 </div>
 
 <script>
-  $(function() {
-    $('#searching').autocomplete({
-      source: $('search_field').val();
+  var p;
+  $('#select_all').click(function() {
+    $(':checkbox').attr('checked', 'checked');
+  });
+  $('#select_none').click(function() {
+    $(':checkbox').removeAttr('checked', '');
+  });
+  $('#searching').change(function() {
+    $.ajax({
+      url: '/contacts/show_filter',
+      type: 'post'
     });
+    p = $('#search_results').text().split(' ');
+    $('#search_filter').val(p);
   });
 </script>
