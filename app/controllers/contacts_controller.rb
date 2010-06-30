@@ -1,6 +1,9 @@
 class ContactsController < ApplicationController
-  before_filter :find_contact, :only => [:update, :destroy, :display_edit, :display_contact]
+  before_filter :find_contact, :only => [:update, :destroy, :display_edit, :display_contact, :destroy_single_contact]
+  before_filter :find_all_contacts, :only => [:show_all_contacts, :contacts_name]
   before_filter :find_groups, :only => [:display_edit, :display_new]
+  
+  require 'csv'
   
   def create
     @contact = Contact.new(params[:contact])
@@ -41,7 +44,6 @@ class ContactsController < ApplicationController
   end
   
   def destroy_single_contact
-    @contact = Contact.find(params[:id])
     unless @contact.group_id == nil
       @group = @contact.group
     end
@@ -60,7 +62,6 @@ class ContactsController < ApplicationController
   end
   
   def show_all_contacts
-    @contacts = Contact.all
     unless @contacts.empty?
       @contacts.sort!{|f,g| f.name <=> g.name}
       respond_to do |format|
@@ -106,7 +107,6 @@ class ContactsController < ApplicationController
   end
   def show_filter
     results = ""
-    @contacts = Contact.all
     respond_to do |format|
       format.js do
         @contacts.each do |f|
@@ -121,7 +121,6 @@ class ContactsController < ApplicationController
     end
   end
   def contacts_name
-    @contacts = Contact.all
     respond_to do |format|
       format.js do
         render :update do |page|
@@ -134,7 +133,22 @@ class ContactsController < ApplicationController
   def find_contact
     @contact = Contact.find(params[:id])
   end
+  def find_all_contacts
+    @contacts = Contact.all
+  end
   def find_groups
     @groups = Group.all
+  end
+  def export_contact
+    @contacts = Contact.all
+    report = StringIO.new
+    CSV::Writer.generate(report, ',') do |title|
+      title << ['Name','Address','Phone']
+      @contacts.each do |f|
+        title << [f.name,f.address,f.phone]
+      end
+    end
+    report.rewind
+    send_data(report.read, :type => 'text/csv;charset=iso-8859-1;header=present', :filename => 'report.csv', :disposition => 'attachment', :encoding => 'utf8')
   end
 end

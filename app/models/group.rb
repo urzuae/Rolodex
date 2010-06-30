@@ -1,4 +1,5 @@
 class Group < ActiveRecord::Base
+  belongs_to :list
   has_many :contacts
   validates_presence_of :title
   

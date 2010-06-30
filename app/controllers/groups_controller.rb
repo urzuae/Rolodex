@@ -1,8 +1,14 @@
 class GroupsController < ApplicationController
+  
   def index
-    @contacts = Contact.all
-    @groups = Group.all
-    @contacts_list = Contact.listing
+    if current_user
+      #@list = List.find_by_id(current_user.id)
+      @contacts = Contact.all #@contacts = @list.contacts
+      @groups = Group.all #@groups = @list.groups
+      @contacts_list = Contact.listing #(list)
+    else
+      redirect_to login_path
+    end
   end
   
   def create

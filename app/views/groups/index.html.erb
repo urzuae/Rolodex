@@ -24,7 +24,8 @@
     Select:
     <a id="select_all" href='#'>All</a>,
     <a id="select_none" href='#'>None</a>,
-    <%= link_to_remote 'Delete', :url => {:controller => "contacts_manager", :action => :delete} %>
+    <%= link_to_remote 'Delete', :url => {:controller => "contacts_manager", :action => :delete} %>,
+    <%= link_to 'Export', {:controller => "contacts", :action => :export_contact} %>
   </div>
 </div>
 <div id="edit_form">
@@ -40,7 +41,7 @@
   </div>
   <input id="search_filter" type="text"/>
 </div>
-
+<%= link_to 'Logout', logout_path %>
 <script>
   var p;
   $('#select_all').click(function() {
@@ -48,13 +49,5 @@
   });
   $('#select_none').click(function() {
     $(':checkbox').removeAttr('checked', '');
-  });
-  $('#searching').change(function() {
-    $.ajax({
-      url: '/contacts/show_filter',
-      type: 'post'
-    });
-    p = $('#search_results').text().split(' ');
-    $('#search_filter').val(p);
   });
 </script>
