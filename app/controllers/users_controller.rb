@@ -11,8 +11,7 @@ class UsersController < ApplicationController
       #SingupMailer.deliver_singup_notification(@user)
       flash[:notice] = 'Thanks for registering'
       session[:user_id] = @user.id
-      #redirect_to :controller => "lists", :action => :create_lst
-      redirect_to groups_path
+      redirect_to :controller => 'lists', :action => "create_list", :id => @user.id
     else
       flash[:error] = 'Something went wrong'
       render 'new'

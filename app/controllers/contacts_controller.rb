@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  before_filter :find_list
   before_filter :find_contact, :only => [:update, :destroy, :display_edit, :display_contact, :destroy_single_contact]
   before_filter :find_all_contacts, :only => [:show_all_contacts, :contacts_name]
   before_filter :find_groups, :only => [:display_edit, :display_new]
@@ -6,20 +7,20 @@ class ContactsController < ApplicationController
   require 'csv'
   
   def create
-    @contact = Contact.new(params[:contact])
+    @contact = @list.contacts.build(params[:contact])
     respond_to do |format|
       format.js do
         render :update do |page|
           if @contact.save
-            @contacts = Contact.all
+            @contacts = @list.contacts
             unless @contact.group_id == nil
-              page.replace_html 'groups_container', :partial => 'groups/group', :collection => Group.all
+              page.replace_html 'groups_container', :partial => 'groups/group', :collection => @list.groups.all
               page.replace_html 'contacts_container', :partial => @contact.group.contacts.sort!{|f,g| f.name <=> g.name}
             else
               page.replace_html 'contacts_container', :partial => 'contacts/contact', :collection => @contacts
             end
             page.replace 'edit_container', '<div id="edit_container"></div>'
-            page.replace_html 'contacts_length', "#{Contact.all.length}"
+            page.replace_html 'contacts_length', "#{@list.contacts.length}"
           else
             page.alert("Contact can not be saved")
           end
@@ -62,13 +63,15 @@ class ContactsController < ApplicationController
   end
   
   def show_all_contacts
-    unless @contacts.empty?
-      @contacts.sort!{|f,g| f.name <=> g.name}
-      respond_to do |format|
-        format.js do
-          render :update do |page|
+    respond_to do |format|
+      format.js do
+        render :update do |page|
+          unless @contacts.empty?
+            @contacts.sort!{|f,g| f.name <=> g.name}
             page.replace_html 'contacts_container', :partial => @contacts
             page.replace 'edit_container', '<div id="edit_container"></div>'
+          else
+            page.alert('No contacts')
           end
         end
       end
@@ -131,13 +134,13 @@ class ContactsController < ApplicationController
   end
   
   def find_contact
-    @contact = Contact.find(params[:id])
+    @contact = @list.contacts.find(params[:id])
   end
   def find_all_contacts
-    @contacts = Contact.all
+    @contacts = @list.contacts
   end
   def find_groups
-    @groups = Group.all
+    @groups = @list.groups
   end
   def export_contact
     @contacts = Contact.all
@@ -150,5 +153,9 @@ class ContactsController < ApplicationController
     end
     report.rewind
     send_data(report.read, :type => 'text/csv;charset=iso-8859-1;header=present', :filename => 'report.csv', :disposition => 'attachment', :encoding => 'utf8')
+  end
+  def find_list
+    @user = User.find_by_username(current_user.username)
+    @list = List.find_by_id(@user.id)
   end
 end

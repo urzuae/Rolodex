@@ -1,8 +1,9 @@
 class ListsController < ApplicationController
   def create_list
-    @list = current_user.list.build(params[:current_user_id])
+    @user = User.find(params[:id])
+    @list = List.new(:user_id => @user.id)
     if @list.save
-      redirect_to groups_path
+      redirect_to login_path
     else
       redirec_to new_user_path
     end

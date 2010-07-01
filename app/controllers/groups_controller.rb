@@ -1,18 +1,18 @@
 class GroupsController < ApplicationController
+  before_filter :find_list
   
   def index
     if current_user
-      #@list = List.find_by_id(current_user.id)
-      @contacts = Contact.all #@contacts = @list.contacts
-      @groups = Group.all #@groups = @list.groups
-      @contacts_list = Contact.listing #(list)
+      @contacts = @list.contacts
+      @groups = @list.groups
+      @contacts_list = Contact.listing(@list)
     else
       redirect_to login_path
     end
   end
   
   def create
-    @group = Group.new(params[:group])
+    @group = @list.groups.build(params[:group])
     respond_to do |format|
       format.js do
         render :update do |page|
@@ -28,7 +28,7 @@ class GroupsController < ApplicationController
   end
   
   def show_contacts
-    @group = Group.find(params[:id])
+    @group = @list.groups.find(params[:id])
     @contacts = @group.contacts
     respond_to do |format|
       format.js do
@@ -94,5 +94,8 @@ class GroupsController < ApplicationController
       end
     end
   end
-  
+  def find_list
+    @user = User.find_by_username(current_user.username)
+    @list = List.find_by_id(@user.id)
+  end
 end
