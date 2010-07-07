@@ -3,6 +3,7 @@ class CreateContacts < ActiveRecord::Migration
     create_table :contacts do |t|
       t.string :name
       t.string :company
+      t.string :avatar
 
       t.timestamps
     end

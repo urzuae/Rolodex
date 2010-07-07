@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
           if @contact.save
             @contacts = @list.contacts
             unless @contact.group_id == nil
-              page.replace_html 'groups_container', :partial => 'groups/group', :collection => @list.groups.all
+              page.replace_html 'groups_container', :partial => 'groups/group', :collection => @list.groups
               page.replace_html 'contacts_container', :partial => @contact.group.contacts.sort!{|f,g| f.name <=> g.name}
             else
               page.replace_html 'contacts_container', :partial => 'contacts/contact', :collection => @contacts
@@ -49,11 +49,11 @@ class ContactsController < ApplicationController
       @group = @contact.group
     end
     @contact.destroy
-    @contacts = Contact.all
+    @contacts = @list.contacts
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.replace_html 'groups_container', :partial => 'groups/group', :collection => Group.all
+          page.replace_html 'groups_container', :partial => 'groups/group', :collection => @list.groups
           page.replace_html 'contacts_container', :partial => @contacts
           page.replace 'edit_container', '<div id="edit_container"></div>'
           page.replace_html 'contacts_length', "#{@contacts.length}"
@@ -82,7 +82,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.replace_html 'edit_container', :partial => '/contacts/form', :object => @contact
+          page.replace_html 'edit_container', :partial => '/contacts/form_edit', :object => @contact, :object => @contact_photo
         end
       end
     end

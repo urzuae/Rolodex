@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :lists
   map.resources :user_sessions
+  map.resources :contact_photos
   map.export '/export', :controller => "contacts", :action => :export_contact
   map.create_list '/create_list', :controller => "lists", :action => :create_list
   map.login '/login', :controller => "user_sessions", :action => :new

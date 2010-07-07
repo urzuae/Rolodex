@@ -1,5 +1,8 @@
 <%= button_to_remote 'Edit', :url => {:controller => "contacts", :action => :display_edit, :id => simple_contact.id} %>
 <%= link_to_remote 'Delete', :url => {:controller => "contacts", :action => :destroy_single_contact, :id => simple_contact.id } %>
+<div id="photo_contact">  
+  <%= image_tag simple_contact.photo.url(:thumb) %>
+</div>
 <div>
   Name: <%= simple_contact.name %><br/>
   Company: <%= simple_contact.company %><br/>

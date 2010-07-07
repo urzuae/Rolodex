@@ -1,4 +1,4 @@
-<% remote_form_for @contact do |f| %>
+<% form_for @contact, :html => {:id => "new_contact_form", :multipart => true} do |f| %>
   <%= f.submit 'Save' %>
   <%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>
 <div>
@@ -19,7 +19,11 @@
 </div>
 <div>
   <%= f.label :group_id %>
-  <%= f.collection_select(:group_id, @groups, :id, :title, {:prompt => true}) %>
+  <%= f.collection_select(:group_id, @groups, :id, :title, :prompt => true) %>
+</div>
+<!--<div>
+  <#%= f.label :photo %>
+  <#%= f.file_field :photo %>
 </div>
 
 <% end %>

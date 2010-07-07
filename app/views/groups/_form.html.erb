@@ -1,4 +1,4 @@
-<% remote_form_for @group do |f| %>
+<% form_for @group, :html => {:id => "new_group_form" } do |f| %>
   <%= f.submit 'Save' %>
   <%= button_to_remote 'Cancel', :url => {:controller => "groups", :action => "clear_form", :id => @group.id } %>
   <div>
