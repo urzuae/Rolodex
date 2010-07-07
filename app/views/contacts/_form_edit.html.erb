@@ -1,0 +1,29 @@
+<% form_for @contact, :html => {:id => "edit_contact_form", :multipart => true} do |f| %>
+  <%= f.submit 'Save' %>
+  <%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>
+<div id='photo_contact'>
+<div>
+<div>
+  <%= f.label :name%>
+  <%= f.text_field :name %>
+</div>
+<div>
+  <%= f.label :company %>
+  <%= f.text_field :company %>
+</div>
+<div>
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+</div>
+<div>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+</div>
+<div>
+  <%= f.label :group_id %>
+  <%= f.collection_select(:group_id, @groups, :id, :title, :prompt => true) %>
+</div>
+<div>
+  <%= f.file_field :avatar%>
+</div>
+<% end %>
