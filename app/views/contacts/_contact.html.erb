@@ -1,4 +1,4 @@
 <div class="contact_item">
   <input class="contact_checkbox"type="checkbox"/>
-  <%= link_to_remote contact.name, :url => {:controller => "contacts", :action => :display_contact, :id => contact.id} %>
+  <a href='#' class='contact_link' id='<%= contact.id %>'><%= contact.name %></a>
 </div>

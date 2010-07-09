@@ -1,5 +1,4 @@
 body {
-  background-color: #1155DD;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
@@ -10,7 +9,6 @@ body {
 
 #contact_form {
   display: block;
-  background-color: green;
   border: solid 2px black;
   padding: 5px 8px;
   margin: 10px 0;
@@ -18,7 +16,6 @@ body {
 
 #group_form {
   display: block;
-  background-color: green;
   border: solid 2px black;
   padding: 5px 8px;
   margin: 10px 0;
@@ -26,7 +23,6 @@ body {
 
 #contacts_list {
   display: block;
-  background-color: green;
   border: solid 1px black;
   float: left;
   padding: 5px 8px;
@@ -36,7 +32,6 @@ body {
 }
 
 #groups_title {
-  background-color: red;
 }
 
 .length {
@@ -45,7 +40,6 @@ body {
 
 #groups_list {
   display: block;
-  background-color: green;
   border: solid 1px black;
   float: left;
   padding: 5px 8px;
@@ -55,12 +49,10 @@ body {
 }
 
 #contacts_title {
-  background-color: red;
 }
 
 #edit_form {
   display: block;
-  background-color: green;
   border: solid 2px black;
   float:left;
   padding: 5px 8px;
@@ -75,7 +67,6 @@ body {
 
 #searcher {
   display: block;
-  background-color: green;
   border: solid 1px black;
   float: left;
   padding: 5px 8px;

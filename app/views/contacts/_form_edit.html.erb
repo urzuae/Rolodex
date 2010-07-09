@@ -1,8 +1,6 @@
-<% form_for @contact, :html => {:id => "edit_contact_form", :multipart => true} do |f| %>
+<% form_for @contact, :html => {:class => "element_form", :multipart => true} do |f| %>
   <%= f.submit 'Save' %>
   <%= button_to_remote 'Cancel', :url => {:controller => "contacts", :action => "show_all_contacts" } %>
-<div id='photo_contact'>
-<div>
 <div>
   <%= f.label :name%>
   <%= f.text_field :name %>

@@ -82,7 +82,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.js do
         render :update do |page|
-          page.replace_html 'edit_container', :partial => '/contacts/form_edit', :object => @contact, :object => @contact_photo
+          page.replace_html 'edit_container', :partial => '/contacts/form_edit', :object => @contact
         end
       end
     end
@@ -108,18 +108,11 @@ class ContactsController < ApplicationController
       end
     end
   end
-  def show_filter
-    results = ""
+  def show_filtered
     respond_to do |format|
       format.js do
-        @contacts.each do |f|
-          if f.name != nil
-            results += f.name + " "
-          end
-        end
-        render :update do |page|
-          page.replace_html "search_results", "#{results}"
-        end
+        @contacts = Contact.find(:all, :conditions => ["name LIKE ?", "%#{params[:data_param]}%"])
+        render :json => @contacts
       end
     end
   end
@@ -152,7 +145,7 @@ class ContactsController < ApplicationController
       end
     end
     report.rewind
-    send_data(report.read, :type => 'text/csv;charset=iso-8859-1;header=present', :filename => 'report.csv', :disposition => 'attachment', :encoding => 'utf8')
+    send_data(report.read, :type => 'text/csv;charset=iso-8859-1;header=present', :filename => 'report.vcf', :disposition => 'attachment', :encoding => 'utf8')
   end
   def find_list
     @user = User.find_by_username(current_user.username)

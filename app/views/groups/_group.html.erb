@@ -1,4 +1,4 @@
 <div class="group_item">
-  <%= link_to_remote group.title, :url => {:controller => "groups", :action => :show_contacts, :id => group.id } %>
+  <a href='#' class='group_link' id='<%= group.id%>'><%= group.title%></a>
   <div class="length"><%= group.contacts.length %></div>
 </div>
