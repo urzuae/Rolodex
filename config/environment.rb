@@ -6,6 +6,8 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem "authlogic"
   config.gem "paperclip"
+  config.gem "twitter", :version => '0.9.1'
+
 
   config.time_zone = 'UTC'
 

@@ -1,5 +1,6 @@
 <input type='button' class = 'edit_contact_btn' id='<%= simple_contact.id%>' value='Edit'/>
 <a href='#' class='delete_contact' id='<%= simple_contact.id%>'>Delete</a>
+<%= link_to 'Export', {:controller => "vcard", :action => :get_contact, :id => '1'} %>
 <div id="photo_contact">
 </div>
 <div>

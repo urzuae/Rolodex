@@ -73,7 +73,15 @@ $(function() {
     $(':checkbox').removeAttr('checked');
   });
   
-  $('#searching').change(function() {
+  $('#all_contacts').click(function () {
+    $.ajax({
+      url: '/contacts/show_all_contacts',
+      type: 'post'
+    });
+    return false;
+  });
+  
+  $('#searching').keyup(function() {
     var url_action = '/contacts/show_filtered/';
     var data_param = {data_param: $(this).val()};
     $.ajax({

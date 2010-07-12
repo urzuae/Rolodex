@@ -13,7 +13,7 @@
 </div>
 <div id="contacts_list" >
   <div id="contacts_title">
-      <%= link_to_remote 'My Contacts', :url => {:controller => 'contacts', :action => :show_all_contacts} %>
+    <a href='#' id='all_contacts'>My Contacts</a>
     <div id="contacts_length"><%= @contacts.length %></div>
     <div class="plus_button"><input type='button' class='add_new_element' value='+' name='contacts'/>
     </div>
@@ -24,8 +24,7 @@
     Select:
     <a id="select_all" href='#'>All</a>,
     <a id="select_none" href='#'>None</a>,
-    <%= link_to_remote 'Delete', :url => {:controller => "contacts_manager", :action => :delete} %>,
-    <%= link_to 'Export', {:controller => "contacts", :action => :export_contact} %>
+    <%= link_to_remote 'Delete', :url => {:controller => "contacts_manager", :action => :delete} %>
   </div>
 </div>
 <div id="edit_form">

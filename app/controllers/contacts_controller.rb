@@ -125,28 +125,21 @@ class ContactsController < ApplicationController
       end
     end
   end
+
+  private
   
   def find_contact
     @contact = @list.contacts.find(params[:id])
   end
+
   def find_all_contacts
     @contacts = @list.contacts
   end
+
   def find_groups
     @groups = @list.groups
   end
-  def export_contact
-    @contacts = Contact.all
-    report = StringIO.new
-    CSV::Writer.generate(report, ',') do |title|
-      title << ['Name','Address','Phone']
-      @contacts.each do |f|
-        title << [f.name,f.address,f.phone]
-      end
-    end
-    report.rewind
-    send_data(report.read, :type => 'text/csv;charset=iso-8859-1;header=present', :filename => 'report.vcf', :disposition => 'attachment', :encoding => 'utf8')
-  end
+
   def find_list
     @user = User.find_by_username(current_user.username)
     @list = List.find_by_id(@user.id)
