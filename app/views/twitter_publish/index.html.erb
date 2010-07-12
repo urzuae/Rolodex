@@ -1,0 +1,6 @@
+<% @usuario.friends_timeline.each do |tweet| %>
+  <%= image_tag "#{tweet.user[:profile_image_url]}" %>
+  <%= tweet.user[:screen_name] %>&nbsp;<br/>
+  <%= tweet.text %><br/>
+<% end %>
+
