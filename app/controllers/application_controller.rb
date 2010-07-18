@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   filter_parameter_logging :password
   helper_method :current_user
-  rescue_from Twitter::Unauthorized, :with => :force_sign_in
+  #rescue_from Twitter::Unauthorized, :with => :force_sign_in
   
   private
   

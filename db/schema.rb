@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(:version => 20100705173356) do
   create_table "contacts", :force => true do |t|
     t.string   "name"
     t.string   "company"
-    t.string   "avatar"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "group_id"

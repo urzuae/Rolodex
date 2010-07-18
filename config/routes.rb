@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.display_new 'contacts/display_new.:format', :controller => "contacts", :action => "display_new", :conditions => {:method => :get}
   map.resources :contacts
   map.resources :groups
   map.resources :users

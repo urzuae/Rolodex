@@ -100,13 +100,13 @@ class ContactsController < ApplicationController
   
   def display_new
     @contact = Contact.new
-    respond_to do |format|
-      format.js do
-        render :update do |page|
-          page.replace_html 'edit_container', :partial => '/contacts/form', :object => @contact
-        end
-      end
-    end
+    # respond_to do |format|
+    #   format.js do
+    #     render :update do |page|
+    #       page.replace_html 'edit_container', :partial => '/contacts/form', :object => @contact
+    #     end
+    #   end
+    # end
   end
   def show_filtered
     respond_to do |format|

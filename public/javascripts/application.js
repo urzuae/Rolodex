@@ -5,7 +5,8 @@ $(function() {
     $(this).click(function() {
       $.ajax({
         url: url_action,
-        type: 'post'
+        type: 'get',
+        dataType: 'script'
       });
       return false;
     });

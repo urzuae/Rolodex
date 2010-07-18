@@ -3,7 +3,7 @@ login: &login
   encoding: utf8
   pool: 5
   username: root
-  password: password
+  password:
 development:
   <<: *login
   database: rolodex_development
